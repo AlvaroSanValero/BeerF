@@ -32,34 +32,35 @@ class DataManager {
     }
 
     // Función para cargar datos desde CoreData
-    func loadDataFromCoreData(appState: AppState) {
-        let context = persistentContainer.viewContext
 
-        // Cargar fabricantes desde CoreData
-        let fetchRequest: NSFetchRequest<ManufacturerEntity> = ManufacturerEntity.fetchRequest()
-        do {
-            let manufacturers = try context.fetch(fetchRequest)
-            // Actualizar el estado de la aplicación con los fabricantes cargados
-            appState.manufacturers = manufacturers.map { Manufacturer(manufacturerEntity: $0) }
-        } catch {
-            print("Error fetching manufacturers: \(error.localizedDescription)")
-        }
+    // Función para cargar datos desde CoreData
+        func loadDataFromCoreData(appState: AppState) {
+            let context = persistentContainer.viewContext
 
-        // Cargar cervezas desde CoreData
-        let beerFetchRequest: NSFetchRequest<BeerEntity> = BeerEntity.fetchRequest()
-        do {
-            let beers = try context.fetch(beerFetchRequest)
-            // Asociar las cervezas a sus respectivos fabricantes en el estado de la aplicación
-            for beer in beers {
-                if let manufacturer = appState.manufacturers.first(where: { $0.id == beer.manufacturer?.objectID }) {
-                    manufacturer.beers.append(Beer(beerEntity: beer))
-                }
+            // Cargar fabricantes desde CoreData
+            let fetchRequest: NSFetchRequest<ManufacturerEntity> = ManufacturerEntity.fetchRequest()
+            do {
+                let manufacturers = try context.fetch(fetchRequest)
+                // Actualizar el estado de la aplicación con los fabricantes cargados
+                appState.manufacturers = manufacturers.map { Manufacturer(manufacturerEntity: $0) }
+            } catch {
+                print("Error fetching manufacturers: \(error.localizedDescription)")
             }
-        } catch {
-            print("Error fetching beers: \(error.localizedDescription)")
-        }
-    }
 
+            // Cargar cervezas desde CoreData
+            let beerFetchRequest: NSFetchRequest<BeerEntity> = BeerEntity.fetchRequest()
+            do {
+                let beers = try context.fetch(beerFetchRequest)
+                // Asociar las cervezas a sus respectivos fabricantes en el estado de la aplicación
+                for beer in beers {
+                    if let manufacturer = appState.manufacturers.first(where: { $0.id == beer.manufacturer?.objectID }) {
+                        manufacturer.beers.append(Beer(beerEntity: beer))
+                    }
+                }
+            } catch {
+                print("Error fetching beers: \(error.localizedDescription)")
+            }
+        }
     // Función para cargar datos desde archivos en el bundle
     func loadDataFromBundle(appState: AppState) {
         // Implementa la lógica para cargar datos desde archivos en el bundle
@@ -126,4 +127,29 @@ class DataManager {
             loadDataFromBundle(appState: appState)
         }
     }
+}
+
+// Modelo de fabricante
+struct Manufacturer: Identifiable {
+    let id: UUID
+    let name: String
+    let isNational: Bool
+    let logo: String?
+    var beers: [Beer]
+}
+
+// Modelo de cerveza
+struct Beer: Identifiable {
+    let id: UUID
+    var name: String
+    var type: BeerType
+    var image: String?
+}
+
+// Enum para tipos de cerveza
+enum BeerType {
+    case lager
+    case pilsen
+    case ipa
+    // Agrega otros tipos según tus necesidades
 }

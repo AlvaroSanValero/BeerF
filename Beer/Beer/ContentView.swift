@@ -8,39 +8,48 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var appState = AppState()
+    @StateObject private var appState = AppState()
 
-    var body: some View {
-        NavigationView {
-            List {
-                // Sección para fabricantes nacionales
-                Section(header: Text("Nacionales")) {
-                    ForEach(appState.manufacturers.filter { $0.isNational }) { manufacturer in
-                        NavigationLink(destination: ManufacturerDetailView(manufacturer: manufacturer)) {
-                            ManufacturerRow(manufacturer: manufacturer)
+    var body: some Scene {
+        WindowGroup {
+            NavigationView {
+                List {
+                    Section(header: Text("Nacionales")) {
+                        ForEach(appState.manufacturers.filter { $0.isNational }) { manufacturer in
+                            NavigationLink(destination: ManufacturerDetailView(appState: appState, manufacturer: manufacturer)) {
+                                ManufacturerRow(manufacturer: manufacturer)
+                            }
+                            .swipeActions(edge: .trailing, allowsFullSwipe: true) { _ in
+                                // Lógica para eliminar fabricante y sus cervezas
+                                appState.removeManufacturer(manufacturer)
+                            }
+                        }
+                    }
+
+                    Section(header: Text("Importadas")) {
+                        ForEach(appState.manufacturers.filter { !$0.isNational }) { manufacturer in
+                            NavigationLink(destination: ManufacturerDetailView(appState: appState, manufacturer: manufacturer)) {
+                                ManufacturerRow(manufacturer: manufacturer)
+                            }
+                            .swipeActions(edge: .trailing, allowsFullSwipe: true) { _ in
+                                // Lógica para eliminar fabricante y sus cervezas
+                                appState.removeManufacturer(manufacturer)
+                            }
                         }
                     }
                 }
-                // Sección para fabricantes importados
-                Section(header: Text("Importadas")) {
-                    ForEach(appState.manufacturers.filter { !$0.isNational }) { manufacturer in
-                        NavigationLink(destination: ManufacturerDetailView(manufacturer: manufacturer)) {
-                            ManufacturerRow(manufacturer: manufacturer)
-                        }
-                    }
-                }
+                .listStyle(InsetGroupedListStyle())
+                .navigationTitle("Fabricantes")
+                .navigationBarItems(trailing: NavigationLink(destination: AddManufacturerView(appState: appState)) {
+                    Text("Añadir fabricante")
+                })
             }
-            .listStyle(InsetGroupedListStyle()) // Estilo de la lista
-            .navigationTitle("Fabricantes") // Título de la barra de navegación
-            .navigationBarItems(trailing: NavigationLink(destination: AddManufacturerView()) {
-                Text("Añadir fabricante") // Botón para añadir fabricante
-            })
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(appState: AppState()) // Utiliza @StateObject en lugar de environmentObject
     }
 }

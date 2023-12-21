@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct ManufacturerRow: View {
-    var manufacturer: ManufacturerRow
-
+    //var manufacturer: ManufacturerRow
+    var manufacturer: Manufacturer
+    
     var body: some View {
         HStack {
             // Imagen del fabricante (reemplaza "systemName" con la carga real de la imagen)

@@ -13,12 +13,15 @@ struct BeerApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environmentObject(appState)
+            ContentView(appState: appState)
                 .onAppear {
-                    DataManager.shared.loadDataFromCoreData()
-                    
+                    DataManager.shared.loadDataFromCoreData(appState: appState)
                 }
         }
     }
 }
+class AppState: ObservableObject {
+    @Published var manufacturers: [Manufacturer] = []
+    @Published var beers: [Beer] = []
+}
+

@@ -20,11 +20,6 @@
 		FB4308D22B19F09200AEAEC1 /* BeerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4308D12B19F09200AEAEC1 /* BeerRow.swift */; };
 		FB4308D42B19F0B900AEAEC1 /* BeerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4308D32B19F0B900AEAEC1 /* BeerDetailView.swift */; };
 		FB4308D62B19F0DF00AEAEC1 /* ReviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4308D52B19F0DF00AEAEC1 /* ReviewsView.swift */; };
-		FBD6C3582B2865B300987539 /* BeerAppModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FBD6C3562B2865B300987539 /* BeerAppModel.xcdatamodeld */; };
-		FBD6C35D2B2867C800987539 /* BeerEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD6C3592B2867C800987539 /* BeerEntity+CoreDataClass.swift */; };
-		FBD6C35E2B2867C800987539 /* BeerEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD6C35A2B2867C800987539 /* BeerEntity+CoreDataProperties.swift */; };
-		FBD6C35F2B2867C800987539 /* ManufacterEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD6C35B2B2867C800987539 /* ManufacterEntity+CoreDataClass.swift */; };
-		FBD6C3602B2867C800987539 /* ManufacterEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD6C35C2B2867C800987539 /* ManufacterEntity+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,11 +56,6 @@
 		FB4308D12B19F09200AEAEC1 /* BeerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerRow.swift; sourceTree = "<group>"; };
 		FB4308D32B19F0B900AEAEC1 /* BeerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailView.swift; sourceTree = "<group>"; };
 		FB4308D52B19F0DF00AEAEC1 /* ReviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsView.swift; sourceTree = "<group>"; };
-		FBD6C3572B2865B300987539 /* BeerAppModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeerAppModel.xcdatamodel; sourceTree = "<group>"; };
-		FBD6C3592B2867C800987539 /* BeerEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BeerEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		FBD6C35A2B2867C800987539 /* BeerEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BeerEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		FBD6C35B2B2867C800987539 /* ManufacterEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManufacterEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		FBD6C35C2B2867C800987539 /* ManufacterEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManufacterEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,10 +86,6 @@
 		FB4308952B19EF9A00AEAEC1 = {
 			isa = PBXGroup;
 			children = (
-				FBD6C3592B2867C800987539 /* BeerEntity+CoreDataClass.swift */,
-				FBD6C35A2B2867C800987539 /* BeerEntity+CoreDataProperties.swift */,
-				FBD6C35B2B2867C800987539 /* ManufacterEntity+CoreDataClass.swift */,
-				FBD6C35C2B2867C800987539 /* ManufacterEntity+CoreDataProperties.swift */,
 				FB4308A02B19EF9B00AEAEC1 /* Beer */,
 				FB4308B12B19EF9C00AEAEC1 /* BeerTests */,
 				FB4308BB2B19EF9C00AEAEC1 /* BeerUITests */,
@@ -130,7 +116,6 @@
 				FB4308D12B19F09200AEAEC1 /* BeerRow.swift */,
 				FB4308D32B19F0B900AEAEC1 /* BeerDetailView.swift */,
 				FB4308D52B19F0DF00AEAEC1 /* ReviewsView.swift */,
-				FBD6C3562B2865B300987539 /* BeerAppModel.xcdatamodeld */,
 			);
 			path = Beer;
 			sourceTree = "<group>";
@@ -290,18 +275,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBD6C35D2B2867C800987539 /* BeerEntity+CoreDataClass.swift in Sources */,
-				FBD6C3582B2865B300987539 /* BeerAppModel.xcdatamodeld in Sources */,
 				FB4308A42B19EF9B00AEAEC1 /* ContentView.swift in Sources */,
 				FB4308D02B19F02E00AEAEC1 /* DataManager.swift in Sources */,
 				FB4308CE2B19F00E00AEAEC1 /* ManufacterDetailView.swift in Sources */,
 				FB4308A22B19EF9B00AEAEC1 /* BeerApp.swift in Sources */,
-				FBD6C3602B2867C800987539 /* ManufacterEntity+CoreDataProperties.swift in Sources */,
-				FBD6C35F2B2867C800987539 /* ManufacterEntity+CoreDataClass.swift in Sources */,
 				FB4308D62B19F0DF00AEAEC1 /* ReviewsView.swift in Sources */,
 				FB4308D22B19F09200AEAEC1 /* BeerRow.swift in Sources */,
 				FB4308D42B19F0B900AEAEC1 /* BeerDetailView.swift in Sources */,
-				FBD6C35E2B2867C800987539 /* BeerEntity+CoreDataProperties.swift in Sources */,
 				FB4308CC2B19EFDA00AEAEC1 /* ManufacterRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -621,19 +601,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		FBD6C3562B2865B300987539 /* BeerAppModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				FBD6C3572B2865B300987539 /* BeerAppModel.xcdatamodel */,
-			);
-			currentVersion = FBD6C3572B2865B300987539 /* BeerAppModel.xcdatamodel */;
-			path = BeerAppModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = FB4308962B19EF9A00AEAEC1 /* Project object */;
 }

@@ -8,24 +8,39 @@
 import SwiftUI
 
 struct ManufacturerDetailView: View {
-    @ObservedObject var appState = AppState()
+    @StateObject var appState: AppState
     var manufacturer: Manufacturer
 
     var body: some View {
-        // Lista que muestra las cervezas del fabricante
         List {
-            ForEach(appState.manufacturer.beers) { beer in
-                // Enlace de navegación para mostrar detalles de cada cerveza
-                NavigationLink(destination: BeerDetailView(beer: beer)) {
-                    BeerRow(beer: beer) // Vista de fila para cada cerveza
+            Section(header: Text("Lager")) {
+                ForEach(manufacturer.beers.filter { $0.type == .lager }) { beer in
+                    NavigationLink(destination: BeerDetailView(editedBeer: $appState.editedBeer)) {
+                        BeerRow(beer: beer)
+                    }
                 }
             }
+
+            Section(header: Text("Pilsen")) {
+                ForEach(manufacturer.beers.filter { $0.type == .pilsen }) { beer in
+                    NavigationLink(destination: BeerDetailView(editedBeer: $appState.editedBeer)) {
+                        BeerRow(beer: beer)
+                    }
+                }
+            }
+
+            // ... Otras secciones para diferentes tipos de cervezas
+
         }
-        .listStyle(InsetGroupedListStyle()) // Estilo de lista
-        .navigationTitle(manufacturer.name) // Título de la barra de navegación con el nombre del fabricante
-        .navigationBarItems(trailing: Button("Añadir cerveza") {
-            // Lógica para agregar cerveza (a implementar)
+        .navigationBarItems(trailing: HStack {
+            Button("Añadir cerveza") {
+                // Lógica para agregar cerveza
+                appState.editedBeer = Beer(type: .lager) // Inicializar con tipo predeterminado
+            }
+            EditButton()
         })
+        .navigationTitle(manufacturer.name)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
