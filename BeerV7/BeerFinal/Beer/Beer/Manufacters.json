@@ -1,0 +1,122 @@
+[
+  {
+    "id": "UUID01",
+    "name": "Corona",
+    "photo": "coronaM.jpg",
+    "country": "Mexico"
+  },
+  {
+    "id": "UUID02",
+    "name": "Heineken",
+    "photo": "heinekenM.jpg",
+    "country": "Netherlands"
+  },
+  {
+    "id": "UUID03",
+    "name": "Budweiser",
+    "photo": "budweiserM.jpg",
+    "country": "United States"
+  },
+  {
+    "id": "UUID04",
+    "name": "Bud Light",
+    "photo": "bud_LightM.jpg",
+    "country": "United States"
+  },
+  {
+    "id": "UUID05",
+    "name": "Modelo Especial",
+    "photo": "modelo_especialM.jpg",
+    "country": "Mexico"
+  },
+  {
+    "id": "UUID06",
+    "name": "Snow",
+    "photo": "snowM.jpg",
+    "country": "China"
+  },
+  {
+    "id": "UUID07",
+    "name": "Miller Lite",
+    "photo": "miller_liteM.jpg",
+    "country": "United States"
+  },
+  {
+    "id": "UUID08",
+    "name": "Coors Light",
+    "photo": "coors_lightM.jpg",
+    "country": "United States"
+  },
+  {
+    "id": "UUID09",
+    "name": "Grupo Damm",
+    "photo": "dammM.jpg",
+    "country": "Spain"
+  },
+  {
+    "id": "UUID10",
+    "name": "Mahou-San Miguel Group",
+    "photo": "mahouM.jpg",
+    "country": "Spain"
+  },
+  {
+    "id": "UUID11",
+    "name": "Cruzcampo",
+    "photo": "cruzcampoM.jpg",
+    "country": "Spain"
+  },
+  {
+    "id": "UUID12",
+    "name": "Estrella Galicia S.A.",
+    "photo": "estrella_galiciaM.jpg",
+    "country": "Spain"
+  },
+  {
+    "id": "UUID13",
+    "name": "Cervezas Alhambra",
+    "photo": "alhambraM.jpg",
+    "country": "Spain"
+  },
+  {
+    "id": "UUID14",
+    "name": "Erdinger",
+    "photo": "erdingerM.jpg",
+    "country": "Germany"
+  },
+  {
+    "id": "UUID15",
+    "name": "Stella Artois",
+    "photo": "stellaM.jpg",
+    "country": "Belgium"
+  },
+  {
+    "id": "UUID16",
+    "name": "Blue Moon",
+    "photo": "blue_moonM.jpg",
+    "country": "United States"
+  },
+  {
+    "id": "UUID17",
+    "name": "Pacifico Clara",
+    "photo": "pacificoM.jpg",
+    "country": "Mexico"
+  },
+  {
+    "id": "UUID18",
+    "name": "Kirin Ichiban",
+    "photo": "kirin_ichibanM.jpg",
+    "country": "Japan"
+  },
+  {
+    "id": "UUID19",
+    "name": "Tsingtao",
+    "photo": "tsingtaoM.jpg",
+    "country": "China"
+  },
+  {
+    "id": "UUID20",
+    "name": "Peroni",
+    "photo": "peroniM.jpg",
+    "country": "Italy"
+  }
+]
