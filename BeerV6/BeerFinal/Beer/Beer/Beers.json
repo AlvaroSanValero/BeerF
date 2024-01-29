@@ -1,0 +1,182 @@
+[
+   {
+      "id": "UUID01",
+      "name": "Corona Lager",
+      "photo": "coronaB.jpg",
+      "manufacturer": "Corona",
+      "beerType": "Lager",
+      "alcoholContent": 4.6,
+      "calorieExpense": 149
+   },
+   {
+      "id": "UUID02",
+      "name": "Heineken Lager",
+      "photo": "heinekenB.jpg",
+      "manufacturer": "Heineken",
+      "beerType": "Lager",
+      "alcoholContent": 5.0,
+      "calorieExpense": 150
+   },
+   {
+      "id": "UUID03",
+      "name": "Budweiser Lager",
+      "photo": "budweiserB.jpg",
+      "manufacturer": "Budweiser",
+      "beerType": "Lager",
+      "alcoholContent": 5.0,
+      "calorieExpense": 145
+   },
+   {
+      "id": "UUID04",
+      "name": "Bud Light Lager",
+      "photo": "budlight_lagerB.jpg",
+      "manufacturer": "Bud Light",
+      "beerType": "Light Lager",
+      "alcoholContent": 4.2,
+      "calorieExpense": 110
+   },
+   {
+      "id": "UUID05",
+      "name": "Modelo Especial Pilsner",
+      "photo": "modelo_especial_pilsnerB.jpg",
+      "manufacturer": "Modelo Especial",
+      "beerType": "Pilsner",
+      "alcoholContent": 4.4,
+      "calorieExpense": 145
+   },
+   {
+      "id": "UUID06",
+      "name": "Snow Beer",
+      "photo": "snowB.jpg",
+      "manufacturer": "CR Snow",
+      "beerType": "Lager",
+      "alcoholContent": 4.0,
+      "calorieExpense": 120
+   },
+   {
+      "id": "UUID07",
+      "name": "Miller Lite",
+      "photo": "miller_liteB.jpg",
+      "manufacturer": "Miller Brewing Company",
+      "beerType": "Light Lager",
+      "alcoholContent": 4.2,
+      "calorieExpense": 96
+   },
+   {
+      "id": "UUID08",
+      "name": "Coors Light",
+      "photo": "coors_lightB.jpg",
+      "manufacturer": "Coors Brewing Company",
+      "beerType": "Light Lager",
+      "alcoholContent": 4.2,
+      "calorieExpense": 102
+   },
+   {
+      "id": "UUID09",
+      "name": "Grupo Damm Lager",
+      "photo": "dammB.jpg",
+      "manufacturer": "Grupo Damm",
+      "beerType": "Lager",
+      "alcoholContent": 0.0,
+      "calorieExpense": 155
+   },
+   {
+      "id": "UUID10",
+      "name": "Mahou-San Miguel Lager",
+      "photo": "mahouB.jpg",
+      "manufacturer": "Mahou-San Miguel Group",
+      "beerType": "Lager",
+      "alcoholContent": 5.1,
+      "calorieExpense": 160
+   },
+   {
+      "id": "UUID11",
+      "name": "Cruzcampo Lager",
+      "photo": "cruzcampoB.jpg",
+      "manufacturer": "Cruzcampo",
+      "beerType": "Lager",
+      "alcoholContent": 5.2,
+      "calorieExpense": 150
+   },
+   {
+      "id": "UUID12",
+      "name": "Estrella Galicia Lager",
+      "photo": "estrella_galiciaB.jpg",
+      "manufacturer": "Estrella Galicia S.A.",
+      "beerType": "Lager",
+      "alcoholContent": 5.5,
+      "calorieExpense": 150
+   },
+   {
+      "id": "UUID13",
+      "name": "Cervezas Alhambra Ale",
+      "photo": "alhambraB.jpg",
+      "manufacturer": "Cervezas Alhambra",
+      "beerType": "Ale",
+      "alcoholContent": 6.2,
+      "calorieExpense": 175
+   },
+   {
+      "id": "UUID14",
+      "name": "Erdinger Weissbier",
+      "photo": "erdingerB.jpg",
+      "manufacturer": "Erdinger",
+      "beerType": "Weissbier",
+      "alcoholContent": 5.3,
+      "calorieExpense": 220
+   },
+   {
+      "id": "UUID15",
+      "name": "Stella Artois",
+      "photo": "stellaB.jpg",
+      "manufacturer": "Stella Artois",
+      "beerType": "Pale Lager",
+      "alcoholContent": 5.0,
+      "calorieExpense": 142
+   },
+   {
+      "id": "UUID16",
+      "name": "Blue Moon Belgian White",
+      "photo": "blue_moonB.jpg",
+      "manufacturer": "Blue Moon Brewing Company",
+      "beerType": "Belgian White",
+      "alcoholContent": 5.4,
+      "calorieExpense": 171
+   },
+   {
+      "id": "UUID17",
+      "name": "Pacifico Clara",
+      "photo": "pacificoB.jpg",
+      "manufacturer": "Grupo Modelo",
+      "beerType": "Lager",
+      "alcoholContent": 4.5,
+      "calorieExpense": 146
+   },
+   {
+      "id": "UUID18",
+      "name": "Kirin Ichiban",
+      "photo": "kirin_ichibanB.jpg",
+      "manufacturer": "Kirin Brewery Company",
+      "beerType": "Lager",
+      "alcoholContent": 5.0,
+      "calorieExpense": 140
+   },
+   {
+      "id": "UUID19",
+      "name": "Tsingtao",
+      "photo": "tsingtaoB.jpg",
+      "manufacturer": "Tsingtao Brewery",
+      "beerType": "Lager",
+      "alcoholContent": 4.7,
+      "calorieExpense": 160
+   },
+   {
+      "id": "UUID20",
+      "name": "Peroni",
+      "photo": "peroniB.jpg",
+      "manufacturer": "Peroni Brewery",
+      "beerType": "Lager",
+      "alcoholContent": 5.1,
+      "calorieExpense": 150
+   }
+]
